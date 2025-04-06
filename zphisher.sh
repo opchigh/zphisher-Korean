@@ -213,7 +213,7 @@ banner() {
 		${ORANGE}      | |                                
 		${ORANGE}      |_|                ${RED}Version : ${__version__}
 
-		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by htr-tech (tahmid.rayat)${WHITE}
+		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by 우성재 (tahmid.rayat)${WHITE}
 	EOF
 }
 
@@ -341,7 +341,7 @@ install_localxpose() {
 ## Exit message
 msg_exit() {
 	{ clear; banner; echo; }
-	echo -e "${GREENBG}${BLACK} Thank you for using this tool. Have a good day.${RESETBG}\n"
+	echo -e "${GREENBG}${BLACK} 이 툴을 사용해 주셔서 감사합니다.${RESETBG}\n"
 	{ reset_color; exit 0; }
 }
 
@@ -355,14 +355,13 @@ about() {
 		${GREEN} Version  ${RED}:  ${ORANGE}${__version__}
 
 		${WHITE} ${REDBG}Warning:${RESETBG}
-		${CYAN}  This Tool is made for educational purpose 
-		  only ${RED}!${WHITE}${CYAN} Author will not be responsible for 
-		  any misuse of this toolkit ${RED}!${WHITE}
+		${CYAN}  이 툴은 오직 나를 위해 만들엇음. 아무나 사용
+		  못함. ${RED}!${WHITE}${CYAN} 존나 심심해서 만들어용
+		  노무응디기분좋다#0523 ${RED}!${WHITE}
 		
-		${WHITE} ${CYANBG}Special Thanks to:${RESETBG}
-		${GREEN}  1RaY-1, Adi1090x, AliMilani, BDhackers009,
-		  KasRoudra, E343IO, sepp0, ThelinuxChoice,
-		  Yisus7u7
+		${WHITE} ${CYANBG} Thanks to:${RESETBG}
+		${GREEN}  
+		       우성재
 
 		${RED}[${WHITE}00${RED}]${ORANGE} Main Menu     ${RED}[${WHITE}99${RED}]${ORANGE} Exit
 
