@@ -1,4 +1,4 @@
-#!/bin/bash
+qqq#!/bin/bash
 
 ##   Zphisher 	: 	Automated Phishing Tool
 ##   Author 	: 	TAHMID RAYAT 
